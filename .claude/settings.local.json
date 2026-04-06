@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm -rf news/vendor)",
+      "Bash(cp -r news_new/vendor news/vendor)",
+      "Bash(cp -r news_new/composer.json news/composer.json)",
+      "Bash(cp -r news_new/composer.lock news/composer.lock)",
+      "Bash(cp news_new/.env news/.env)",
+      "Bash(cp -r news_new/* news/)",
+      "Bash(cp news_new/.env.example news/.env.example)",
+      "Bash(cp news_new/.editorconfig news/.editorconfig)",
+      "Bash(cp news_new/.gitattributes news/.gitattributes)",
+      "Bash(cp news_new/.gitignore news/.gitignore)",
+      "Bash(netstat -ano)",
+      "Bash(taskkill //PID 24996 //F)",
+      "Bash(taskkill //PID 21384 //F)",
+      "Bash(taskkill //PID 23388 //F)",
+      "Bash(php artisan:*)",
+      "Bash(php -v)",
+      "Read(//c/laragon/bin/php/**)",
+      "Read(//d/laragon/bin/**)",
+      "Bash(D:/laragon/bin/php/php-8.3.13-Win32-vs16-x64/php.exe -r \"echo ''works'';\")",
+      "Bash(\"C:/laragon/bin/php/php-8.3.13-Win32-vs16-x64/php.exe\" \"D:/work/laragon/www/news/artisan\" optimize:clear)",
+      "Bash(mkdir -p /tmp/infinityfree-upload)",
+      "Bash(cp -r app bootstrap config database resources routes storage vendor artisan composer.json composer.lock /tmp/infinityfree-upload/)",
+      "Bash(cp -r public/* /tmp/infinityfree-upload/)",
+      "Bash(cp .env /tmp/infinityfree-upload/.env)",
+      "Bash(/tmp/infinityfree-upload/.htaccess:*)",
+      "Bash(zip -r \"D:/work/laragon/www/news/infinityfree-upload.zip\" . -x \"*.git*\")",
+      "Bash(powershell.exe -Command \"Compress-Archive -Path ''./*'' -DestinationPath ''D:/work/laragon/www/news/infinityfree-upload.zip'' -Force\")",
+      "Bash(powershell.exe -Command \"Remove-Item ''D:/work/laragon/www/news/infinityfree-upload.zip'' -Force; Add-Type -AssemblyName System.IO.Compression.FileSystem; [System.IO.Compression.ZipFile]::CreateFromDirectory\\(''/tmp/infinityfree-upload'', ''D:/work/laragon/www/news/infinityfree-upload.zip''\\)\")",
+      "Bash(cygpath -w /tmp/infinityfree-upload)",
+      "Bash(powershell.exe -Command \"Remove-Item ''D:/work/laragon/www/news/infinityfree-upload.zip'' -ErrorAction SilentlyContinue; Add-Type -AssemblyName System.IO.Compression.FileSystem; [System.IO.Compression.ZipFile]::CreateFromDirectory\\(''C:\\\\Users\\\\Marwan\\\\AppData\\\\Local\\\\Temp\\\\infinityfree-upload'', ''D:\\\\work\\\\laragon\\\\www\\\\news\\\\infinityfree-upload.zip''\\)\")",
+      "Bash(curl --version)",
+      "Bash(curl -s --ftp-create-dirs -T /tmp/infinityfree-upload/index.php \"ftp://ftpupload.net/htdocs/index.php\" --user \"if0_41591935:69sMMD6Vtaf\")",
+      "Bash(bash /tmp/upload_ftp.sh)",
+      "Bash(npm list:*)",
+      "Bash(npm install:*)"
+    ]
+  }
+}
