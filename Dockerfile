@@ -19,12 +19,18 @@ COPY . .
 RUN cp .env.example .env && \
     sed -i 's/APP_KEY=/APP_KEY=base64:eWFfvtGHigQHuIwlM4P2iAaDAPPd3f3wnQIFx31Lj8Q=/' .env && \
     sed -i 's/APP_ENV=local/APP_ENV=production/' .env && \
-    sed -i 's/APP_DEBUG=true/APP_DEBUG=false/' .env
+    sed -i 's/APP_DEBUG=true/APP_DEBUG=true/' .env && \
+    sed -i 's|APP_URL=http://localhost|APP_URL=https://news-production-18b9.up.railway.app|' .env && \
+    echo "GNEWS_API_KEY=30a516a2514342d3654e14d2c4fde27c" >> .env && \
+    echo "GNEWS_BASE_URL=https://gnews.io/api/v4" >> .env
 
 # Install dependencies
 RUN composer install --no-dev --optimize-autoloader --no-interaction
 
 # Set permissions
-RUN chmod -R 775 storage bootstrap/cache
+RUN chmod -R 777 storage bootstrap/cache
+
+# Create log file
+RUN mkdir -p storage/logs && touch storage/logs/laravel.log && chmod 777 storage/logs/laravel.log
 
 CMD php artisan serve --host=0.0.0.0 --port=${PORT:-8000}
