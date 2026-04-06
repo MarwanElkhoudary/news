@@ -35,7 +35,10 @@
       "Bash(curl -s --ftp-create-dirs -T /tmp/infinityfree-upload/index.php \"ftp://ftpupload.net/htdocs/index.php\" --user \"if0_41591935:69sMMD6Vtaf\")",
       "Bash(bash /tmp/upload_ftp.sh)",
       "Bash(npm list:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(gh auth:*)",
+      "Bash(git config:*)",
+      "WebFetch(domain:news-production-18b9.up.railway.app)"
     ]
   }
 }
